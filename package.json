@@ -1,10 +1,9 @@
 {
   "name": "docsify-plantuml",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "plantuml plugin of docsify",
   "main": "src",
   "scripts": {
-    "dev": "webpack . ../../../work/gitlab/open/document/docsify-plantuml.js",
     "build": "webpack . dist/docsify-plantuml.js && webpack . -p dist/docsify-plantuml.min.js"
   },
   "repository": {
@@ -14,7 +13,12 @@
   "keywords": [
     "docsify",
     "plantuml"
-  ],
+	],
+	"files": [
+		"src",
+		"dist",
+		"README.md"
+	],
   "author": "yelo",
   "license": "MIT",
   "bugs": {
@@ -22,7 +26,6 @@
   },
   "homepage": "https://github.com/imyelo/docsify-plantuml#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
     "plantuml-encoder": "^1.2.4"
   },
   "devDependencies": {
