@@ -1,0 +1,32 @@
+{
+  "name": "docsify-plantuml",
+  "version": "1.0.0",
+  "description": "plantuml plugin of docsify",
+  "main": "src",
+  "scripts": {
+    "dev": "webpack . ../../../work/gitlab/open/document/docsify-plantuml.js",
+    "build": "webpack . dist/docsify-plantuml.js && webpack . -p dist/docsify-plantuml.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/imyelo/docsify-plantuml.git"
+  },
+  "keywords": [
+    "docsify",
+    "plantuml"
+  ],
+  "author": "yelo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imyelo/docsify-plantuml/issues"
+  },
+  "homepage": "https://github.com/imyelo/docsify-plantuml#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "plantuml-encoder": "^1.2.4"
+  },
+  "devDependencies": {
+    "raw-loader": "^0.5.1",
+    "webpack": "^3.5.4"
+  }
+}
