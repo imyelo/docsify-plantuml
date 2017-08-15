@@ -8,8 +8,8 @@ insert script into your docsify document
 
 
 ## Example
-[index.html]('./example/index.html)
-[README.md](./example/README.md)
+[index.html](example/index.html)
+[README.md](example/README.md)
 
 
 ## License
