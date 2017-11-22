@@ -13,21 +13,19 @@
   "keywords": [
     "docsify",
     "plantuml"
-	],
-	"files": [
-		"src",
-		"dist",
-		"README.md"
-	],
+  ],
+  "files": [
+    "src",
+    "dist",
+    "README.md"
+  ],
   "author": "yelo",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/imyelo/docsify-plantuml/issues"
   },
   "homepage": "https://github.com/imyelo/docsify-plantuml#readme",
-  "dependencies": {
-    "plantuml-encoder": "^1.2.4"
-  },
+  "dependencies": {},
   "devDependencies": {
     "raw-loader": "^0.5.1",
     "webpack": "^3.5.4"
