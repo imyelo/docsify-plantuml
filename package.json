@@ -4,7 +4,8 @@
   "description": "plantuml plugin of docsify",
   "main": "src",
   "scripts": {
-    "build": "webpack . dist/docsify-plantuml.js && webpack . -p dist/docsify-plantuml.min.js"
+    "build": "webpack . dist/docsify-plantuml.js && webpack . -p dist/docsify-plantuml.min.js",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
