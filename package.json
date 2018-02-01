@@ -25,7 +25,9 @@
     "url": "https://github.com/imyelo/docsify-plantuml/issues"
   },
   "homepage": "https://github.com/imyelo/docsify-plantuml#readme",
-  "dependencies": {},
+  "dependencies": {
+    "plantuml-encoder": "^1.2.5"
+  },
   "devDependencies": {
     "raw-loader": "^0.5.1",
     "webpack": "^3.5.4"

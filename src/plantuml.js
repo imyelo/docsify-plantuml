@@ -1,12 +1,12 @@
 import style from 'raw-loader!./style.pu'
-import compress from './compress'
+import { encode } from 'plantuml-encoder'
 
 var LANG = 'plantuml'
 var SELECTOR = 'pre[data-lang="' + LANG + '"]'
 
 export function plant (content) {
   content = style + content
-  return '<img src="http://www.plantuml.com/plantuml/svg/' + compress(content) + '" />'
+  return '<img src="http://www.plantuml.com/plantuml/svg/' + encode(content) + '" />'
 }
 
 export function replace (content, selector) {
