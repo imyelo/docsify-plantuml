@@ -1,3 +1,7 @@
 import { install } from './plantuml'
 
-$docsify.plugins = [].concat(install, $docsify.plugins)
+if (!window.$docsify) {
+  window.$docsify = {}
+}
+
+window.$docsify.plugins = (window.$docsify.plugins || []).concat(install)
