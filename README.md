@@ -2,10 +2,26 @@
 [![npm](https://img.shields.io/npm/v/docsify-plantuml.svg?style=flat-square)](https://www.npmjs.com/package/docsify-plantuml)
 
 ## Install
-1. insert script into docsify document
-```
-<script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
-```
+1. Configure docsify-plantuml (optional):
+
+    ```html
+    <script>
+    window.$docsify = {
+      plantuml: {
+        skin: 'default',
+      },
+    }
+    </script>
+    ```
+    
+    See [Options](#Options) for more details.
+
+2. Insert script into docsify document:
+
+    ```html
+    <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+    ```
+
 
 ## Usage
 Write your plantuml code into a code block marked ``plantuml``:
@@ -22,6 +38,27 @@ Alice <-- Bob: another authentication Response
 @enduml
 ```
 ````
+
+
+## Options
+## skin
+By default, we set the skin of the plantuml to [a cleaner version](https://github.com/matthewjosephtaylor/plantuml-style) for you.
+However, You can still switch with this option (`skin`) if you prefer the classic one.
+
+All available values are:
+- `default`
+- `classic`
+
+For example:
+```
+<script>
+window.$docsify = {
+  plantuml: {
+    skin: 'classic',
+  },
+}
+</script>
+```
 
 
 ## Example
