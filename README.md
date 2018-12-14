@@ -72,4 +72,4 @@ window.$docsify = {
 
 
 ## License
-the MIT License
+MIT &copy; yelo, 2017 - present
