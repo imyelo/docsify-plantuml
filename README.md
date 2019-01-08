@@ -60,6 +60,18 @@ window.$docsify = {
 </script>
 ```
 
+## serverPath
+By default, the official PlantUML server is used. If you have your own, configure it using the `serverPath` option:
+
+```
+<script>
+window.$docsify = {
+  plantuml: {
+    serverPath: 'https://custom-server.local/plantuml/png/',
+  },
+}
+</script>
+```
 
 ## Example
 - [index.html](example/index.html)
