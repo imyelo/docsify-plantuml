@@ -6,7 +6,7 @@ var SELECTOR = 'pre[data-lang="' + LANG + '"]'
 
 export function plant (content, config) {
   content = skin(config.skin) + content
-  return '<img src="' + (config.serverPath || 'http://www.plantuml.com/plantuml/svg/') + encode(content) + '" />'
+  return '<img src="' + (config.serverPath || '//www.plantuml.com/plantuml/svg/') + encode(content) + '" />'
 }
 
 export function replace (content, selector, config) {
