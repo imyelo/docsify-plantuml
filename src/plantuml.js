@@ -5,8 +5,12 @@ var LANG = 'plantuml'
 var SELECTOR = 'pre[data-lang="' + LANG + '"]'
 
 export function plant (content, config) {
-  content = skin(config.skin) + content
-  return '<img src="' + (config.serverPath || '//www.plantuml.com/plantuml/svg/') + encode(content) + '" />'
+  var content = skin(config.skin) + content
+  var svgUrl = (config.serverPath || '//www.plantuml.com/plantuml/svg/') + encode(content)
+  if (config.renderSvgAsObject) {
+    return '<object type="image/svg+xml" data="'+ svgUrl + '" />'
+  }
+  return '<img src="' + svgUrl + '" />'
 }
 
 export function replace (content, selector, config) {
@@ -30,7 +34,8 @@ export function replace (content, selector, config) {
 
 export function install (hook, vm) {
 	const config = Object.assign({}, {
-		skin: 'default',
+        skin: 'default',
+        renderSvgAsObject: false
 	}, vm.config.plantuml)
   hook.afterEach(function (content) {
     return replace(content, SELECTOR, config)
