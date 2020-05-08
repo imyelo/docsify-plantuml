@@ -73,6 +73,21 @@ window.$docsify = {
 </script>
 ```
 
+## renderSvgAsObject
+By default, the svg is renderd inside an `<img src=''/>` tag. 
+If you want interactive svg (like links) configure the `renderSvgAsObject` option:
+This will render like: `<object type='image/svg+xml' data=''/>`
+
+```
+<script>
+window.$docsify = {
+  plantuml: {
+    renderSvgAsObject: true,
+  },
+}
+</script>
+```
+
 ## Example
 - [index.html](example/index.html)
 - [README.md](https://raw.githubusercontent.com/imyelo/docsify-plantuml/master/example/README.md)
