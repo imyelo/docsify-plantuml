@@ -87,6 +87,15 @@ window.$docsify = {
 }
 </script>
 ```
+Please note that relative urls should start with `$`
+````markdown
+```plantuml
+@startuml
+Alice -> Bob: Authentication Request [[$./other-file docs]]
+Bob --> Alice: Authentication Response [[$../other-file docs]]
+@enduml
+```
+````
 
 ## Example
 - [index.html](example/index.html)
