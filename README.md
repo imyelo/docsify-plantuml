@@ -98,8 +98,12 @@ Bob --> Alice: Authentication Response [[$../other-file docs]]
 ````
 
 ## Example
-- [index.html](example/index.html)
-- [README.md](https://raw.githubusercontent.com/imyelo/docsify-plantuml/master/example/README.md)
+### Basic Usage
+- [index.html](example/basic/index.html)
+- [README.md](https://raw.githubusercontent.com/imyelo/docsify-plantuml/master/example/basic/README.md)
+
+### Render as SVG Object
+- [index.html](example/svg-object/index.html)
 
 
 ## Related
