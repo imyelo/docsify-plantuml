@@ -20,7 +20,8 @@
   ],
   "files": [
     "src",
-    "dist",
+		"dist",
+		"example",
     "README.md"
   ],
   "author": "yelo",
