@@ -19,11 +19,11 @@ function createUrls(content) {
   var location = window.location.toString();
   var currenturl = location.substring(0, location.lastIndexOf('/') + 1)
 
-  return content.replace(/\[\[\$(?<path>(\.?\.\/)*)/g, resolvePath)
+  return content.replace(/\[\[\$((?:\.?\.\/)*)/g, resolvePath)
 
   // solution taken from docsify codebase
-  function resolvePath(path) {
-    var segments = path.replace("[[$", currenturl).split('/')
+  function resolvePath(_, path) {
+    var segments = `${currenturl}${path}`.split('/')
     var resolved = []
     for (var i = 0, len = segments.length; i < len; i++) {
       var segment = segments[i]
