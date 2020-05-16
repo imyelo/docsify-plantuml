@@ -23,7 +23,7 @@ function createUrls(content) {
 
   // solution taken from docsify codebase
   function resolvePath(_, path) {
-    var segments = `${currenturl}${path}`.split('/')
+    var segments = (currenturl + path).split('/')
     var resolved = []
     for (var i = 0, len = segments.length; i < len; i++) {
       var segment = segments[i]
