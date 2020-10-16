@@ -5,18 +5,18 @@ var LANG = 'plantuml'
 var SELECTOR = 'pre[data-lang="' + LANG + '"]'
 
 export function plant(content, config) {
-  var content = skin(config.skin) + content
-  var urlPrefix = (config.serverPath || '//www.plantuml.com/plantuml/svg/')
+  var newContent = config.preloadedSkin + content
+  var urlPrefix = config.serverPath || '//www.plantuml.com/plantuml/svg/'
   if (config.renderSvgAsObject) {
-    var svgUrl = urlPrefix + encode(createUrls(content))
+    var svgUrl = urlPrefix + encode(createUrls(newContent))
     return '<object type="image/svg+xml" data="' + svgUrl + '" />'
   }
-  var svgUrl = urlPrefix + encode(content)
+  var svgUrl = urlPrefix + encode(newContent)
   return '<img src="' + svgUrl + '" />'
 }
 
 function createUrls(content) {
-  var location = window.location.toString();
+  var location = window.location.toString()
   var currenturl = location.substring(0, location.lastIndexOf('/') + 1)
 
   return content.replace(/\[\[\$((?:\.?\.\/)*)/g, resolvePath)
@@ -58,10 +58,15 @@ export function replace(content, selector, config) {
 
 export function install(hook, vm) {
   const config = Object.assign({}, {
-    skin: 'default',
-    renderSvgAsObject: false
-  }, vm.config.plantuml)
-  hook.afterEach(function (content) {
-    return replace(content, SELECTOR, config)
+      skin: 'default',
+      renderSvgAsObject: false,
+      preloadedSkin: '',
+    }, vm.config.plantuml)
+
+  hook.afterEach(function (content, next) {
+    skin(config.skin).then(function (s) {
+      config.preloadedSkin = s
+      next(replace(content, SELECTOR, config))
+    })
   })
 }
