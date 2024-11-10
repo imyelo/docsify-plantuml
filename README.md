@@ -48,6 +48,8 @@ However, You can still switch with this option (`skin`) if you prefer the classi
 All available values are:
 - `default`
 - `classic`
+- `./assets/puml/theme.pu`
+- `https://raw.githubusercontent.com/bschwarz/puml-themes/master/themes/superhero/puml-theme-superhero.puml`
 
 For example:
 ```
@@ -105,6 +107,13 @@ Bob --> Alice: Authentication Response [[$../other-file docs]]
 ### Render as SVG Object
 - [index.html](example/svg-object/index.html)
 
+### Themable
+
+#### External Theme
+- [index.html](example/themable/external/index.html)
+
+#### Local Theme
+- [index.html](example/themable/local/index.html)
 
 ## Related
 - [docsify](https://github.com/QingWei-Li/docsify/)
